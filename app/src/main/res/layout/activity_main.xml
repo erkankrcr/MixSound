@@ -1,70 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="20dp"
-        android:layout_weight="1.5">
+        android:id="@+id/SoundOneLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/OneBetweenTwo"
+        android:layout_above="@id/OneBetweenThree"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <Space
+        android:id="@+id/OneBetweenTwo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/RecordLayout"
+        android:layout_alignParentTop="true"/>
+    <LinearLayout
+        android:id="@+id/SoundTwoLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/OneBetweenTwo"
+        android:layout_above="@id/TwoBetweenFour"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/OneBetweenThree"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/RecordLayout"
+        android:layout_alignParentLeft="true"/>
+
+    <LinearLayout
+        android:id="@+id/SoundThreeLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/ThreeBetweenFour"
+        android:layout_below="@id/OneBetweenThree"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/ThreeBetweenFour"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/RecordLayout"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:id="@+id/SoundFourLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/ThreeBetweenFour"
+        android:layout_below="@id/TwoBetweenFour"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/TwoBetweenFour"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/RecordLayout"
+        android:layout_alignParentRight="true"/>
+
+
+    <LinearLayout
+        android:id="@+id/RecordLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true">
         <ImageView
-            android:id="@+id/Record"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"
+            android:id="@+id/RecordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_microphone"/>
-
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Sound12"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:visibility="invisible"
-        android:layout_weight="1">
-        <ImageView
-            android:id="@+id/Sound1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_microphone"
-            android:padding="20dp"
-            android:clickable="true"
-            android:layout_weight="1"/>
 
-        <ImageView
-            android:id="@+id/Sound2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_microphone"
-            android:padding="20dp"
-            android:clickable="true"
-            android:layout_weight="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Sound34"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:visibility="invisible"
-        android:layout_weight="1">
-        <ImageView
-            android:id="@+id/Sound3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_microphone"
-            android:padding="20dp"
-            android:clickable="true"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/Sound4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_microphone"
-            android:padding="20dp"
-            android:clickable="true"
-            android:layout_weight="1"/>
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
